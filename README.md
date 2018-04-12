@@ -8,7 +8,7 @@ gitignore is set up to ignore everything except the theme. There are also white 
 
 # Steps to getting set-up with this starter theme
 
-1. Edit the composer package details in _composer. Check name, description, and acf and timber version is correct or not.
+1. Edit the composer package details in _composer. Check name, description, and acf and timber version is correct or not. If you are using ACF Pro you need to add a .env (ACF_PRO_KEY=b3JkZXJ...) (same folder in _composer)
 2. Install the composer pakage via composer install --no-dev
 3. Edit the the npm packge in _gulp_npm. Check name, description, and dependency versions. Optionally you can run npm outdated to see what's outdated and then npm update.
 4. Go in to the gulpfile now and change what you need to. If you changed the folder names and structure, you should change it here too.
