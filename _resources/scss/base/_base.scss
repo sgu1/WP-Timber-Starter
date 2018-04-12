@@ -1,0 +1,115 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# 1.0 Global Variables
+    # 1.1 Fonts
+    # 1.2 Colors
+    # 1.3 Media Screens & and grid
+# 2.0 Mixins
+    # 2.1 Media Query
+# 3.0
+    # 3.1 Images
+    # 3.2 Wrapper
+*/
+
+/*--------------------------------------------------------------
+# 1.0 Variables
+--------------------------------------------------------------*/
+
+/*       ------
+**** ## 1.1 Fonts ****
+*        ------      */
+
+$font-body: '', sans-serif;
+$font-header: '', sans-serif;
+$font-subheader: '';
+
+/*       ------
+**** ## 1.2 Colors ****
+*        ------      */
+
+$lightGrey: #eee;
+
+
+/*       ------
+**** ## 1.3 Media Screens ****
+*        ------  
+* FYI: http://sass-lang.com/documentation/Sass/Script/Functions.html
+* length($list) : Returns the length of a list.
+* nth($list, $n) : Returns a specific item in a list.
+*
+*/
+
+//Basically the functions here are returning the lower or upper range values from the 2 item range lists below
+@function lower-bound($range){
+    //If there is no range list item lower bound will be 0
+    @if length($range) <= 0 {
+        @return 0;
+    }
+    @return #{nth($range,1)};
+}
+
+@function upper-bound($range) {
+    //range list is less than 2 so upper-bound will be unlimited
+    @if length($range) < 2 {
+        @return 999999;
+    }
+    @return #{nth($range, 2)};
+}
+
+//2 item range list
+$xsmall-range: (0px, 340px);
+$small-range: (340px, 640px);
+$medium-range: (641px, 1024px);
+$large-range: (1025px, 1440px);
+$xlarge-range: (1441px, 1920px);
+$xxlarge-range: (1921px);
+
+// To use these just go @media #{$screen-size} -> BTW: those are called interpolation braces
+$xsmall-only: "only screen and (max-width:#{upper-bound($xsmall-range)})";
+$small-up: "only screen and (min-width:#{lower-bound($small-range)})";
+$small-only: "only screen and (min-width:#{lower-bound($small-range)}) and (max-width: #{upper-bound($small-range)})";
+$medium-up: "only screen and (min-width:#{lower-bound($medium-range)})";
+$medium-only: "only screen and (min-width:#{lower-bound($medium-range)}) and (max-width: #{upper-bound($medium-range)})";
+$large-up: "only screen and (min-width:#{lower-bound($large-range)})";
+$large-only: "only screen and (min-width:#{lower-bound($large-range)}) and (max-width: #{upper-bound($large-range)})";
+$xlarge-up: "only screen and (min-width:#{lower-bound($xlarge-range)})";
+
+// GRID Variables
+$max-width: 85.375rem;
+
+
+/*--------------------------------------------------------------
+# 2.0 Mixins
+--------------------------------------------------------------*/
+
+/*       ------
+**** ## 2.1 Media Query ****
+*        ------      */
+@mixin media-scrn($screen) {
+    @media (min-width: $screen+'px') {
+        @content;
+    }
+}
+@mixin max-width{
+    max-width: $max-width;
+    margin: auto;
+}
+
+/*--------------------------------------------------------------
+# 3.0 Defaults
+--------------------------------------------------------------*/
+/*       ------
+**** ## 3.1 Images ****
+*        ------      */
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/*       ------
+**** ## 3.2 Wrapper ****
+*        ------      */
+.max-wrapper{
+    @include max-width();
+}

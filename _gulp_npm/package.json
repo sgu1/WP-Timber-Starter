@@ -1,0 +1,33 @@
+{
+    "name": "your-name",
+    "version": "1.0.0",
+    "description": "NPM packages for your website.",
+    "main": "index.php",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/sgu1/WP-Timber-Starter"
+    },
+    "author": "You",
+    "license": "your-license",
+    "devDependencies": {
+      "browser-sync": "^2.23.6",
+      "gulp": "^3.9.1",
+      "gulp-autoprefixer": "^4.1.0",
+      "gulp-concat": "^2.6.1",
+      "gulp-jshint": "^2.1.0",
+      "gulp-notify": "^3.2.0",
+      "gulp-rename": "^1.2.2",
+      "gulp-sass": "^3.1.0",
+      "gulp-sourcemaps": "^2.6.4",
+      "gulp-uglify": "^3.0.0",
+      "gulp-uglifycss": "^1.0.9",
+      "jshint": "^2.9.5"
+    },
+    "dependencies": {
+      "del": "^3.0.0",
+      "npm": "^5.7.1"
+    }
+  }
