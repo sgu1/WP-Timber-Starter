@@ -1,6 +1,6 @@
 <?php
 
-require_once(__DIR__ . 'example_crazy_display.php');
+require_once(__DIR__ . '/example_crazy_display.php');
 
 //Get ACF page layout templates in an array
 if (class_exists('acf') && is_page()){
