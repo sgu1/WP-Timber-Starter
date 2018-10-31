@@ -32,7 +32,7 @@ _composer/*
 !_composer/composer.lock
 
 # Gulp_NPM: ignore all node_modules
-_gulp_npm/node_modules
+_npm/node_modules
 
 # ignore OS generated files
 ehthumbs.db

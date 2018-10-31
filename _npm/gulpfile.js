@@ -36,16 +36,15 @@ var styleDest = SRC_THEME; // Path to place compiled css file
 
 var jsVendorSRC = SRC_RESOURCE + 'js/vendors/*.js'; // Path to JS custom scripts folder
 var jsVendorDest = SRC_THEME + 'assets/js/'; // Path to compiled JS vendor files
-var jsVendorFile = 'vendors'; // Compiled JS vendors file name
+var jsVendorFile = 'vendor'; // Compiled JS vendors file name
 // Default set to vendors i.e. vendors.js
 
 var jsCustomSRC         = SRC_RESOURCE + 'js/custom/*.js'; // Path to JS custom scripts folder
 var jsCustomDest        = SRC_THEME + 'assets/js/'; // Path to place the compiled JS custom scripts file
 var jsCustomFile        = 'vsg_custom'; // Compiled JS custom file name
-// Default set to vsg_custom i.e. vsg_custom.js
 
 var styleWatchFiles     = SRC_RESOURCE + 'scss/**/*.scss'; // Path to all *.scss files inside css folder and inside them
-var vendorJSWatchFiles  = SRC_RESOURCE + 'js/vendors/*.js'; // Path to all vendors JS files
+var vendorJSWatchFiles  = SRC_RESOURCE + 'js/vendor/*.js'; // Path to all vendors JS files
 var customJSWatchFiles  = SRC_RESOURCE + 'js/custom/*.js'; // Path to all custom JS files
 
 /* ============================ */

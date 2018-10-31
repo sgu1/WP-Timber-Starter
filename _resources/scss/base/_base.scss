@@ -30,7 +30,6 @@ $font-subheader: '';
 
 $lightGrey: #eee;
 
-
 /*       ------
 **** ## 1.3 Media Screens ****
 *        ------  
@@ -39,6 +38,8 @@ $lightGrey: #eee;
 * nth($list, $n) : Returns a specific item in a list.
 *
 */
+// GRID Variables
+$max-width: 85.375rem;
 
 //Basically the functions here are returning the lower or upper range values from the 2 item range lists below
 @function lower-bound($range){
@@ -74,10 +75,6 @@ $medium-only: "only screen and (min-width:#{lower-bound($medium-range)}) and (ma
 $large-up: "only screen and (min-width:#{lower-bound($large-range)})";
 $large-only: "only screen and (min-width:#{lower-bound($large-range)}) and (max-width: #{upper-bound($large-range)})";
 $xlarge-up: "only screen and (min-width:#{lower-bound($xlarge-range)})";
-
-// GRID Variables
-$max-width: 85.375rem;
-
 
 /*--------------------------------------------------------------
 # 2.0 Mixins

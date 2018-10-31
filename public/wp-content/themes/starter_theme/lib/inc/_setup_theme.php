@@ -6,6 +6,7 @@
     1.1 Disable XMLRPC
     1.2 Allow SVG Upload
     1.3 Pre Get Posts
+    1.4 Add Theme Supports
 2.0 Theme Setup
 */
 
@@ -42,6 +43,12 @@ add_filter(
 // function main_query_modify_blog( $query ) {
 
 // }
+
+/* 1.4 Add Theme Supports
+---------------------
+*/
+//WooCommerce
+add_theme_support('woocommerce');
 
 /**************************
  * 2.0 Theme Setup
